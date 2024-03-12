@@ -1,39 +1,37 @@
 // Navbar.jsx
 
 import React from 'react';
+
+import Script from 'next/script'
+
 import Link from "next/link"
-import Head from 'next/head';
 
 const CustomNavbar = () => {
     return (
-        <div>
-            <Head>
-                <title>Tender App</title>
-                <link
-                    rel="stylesheet"
-                    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-                    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-                    crossOrigin="anonymous"
-                />
-            </Head>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <Link href="/" className="navbar-brand">Tender App
-                </Link>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav ml-auto">
-                        <li className="nav-item">
-                            <Link href="/admin/tenders" className="nav-link">Admin
-                            </Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link href="/user/apply" className="nav-link">Apply
-                            </Link>
-                        </li>
-                    </ul>
+        <><nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Tender</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </nav>
-            <div className="container mt-4"></div>
-        </div>
+            </nav></>
     )
 };
 
